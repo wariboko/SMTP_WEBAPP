@@ -28,7 +28,7 @@ def index(request):
             msg['From'] = sender
             msg['To'] = recipients
             msg.set_content(message)
-
+            '''
             with open('/mnt/c/Users/40756/Onedrive/Documents/SMTP_APP/Cover Letter-David Wariboko.docx','rb') as f:
                 file_data = f.read()
                 file_type = imghdr.what(f.name)
@@ -36,7 +36,7 @@ def index(request):
                 file_name = f.name
                 print(file_name)
             msg.add_attachment(file_data, maintype='docx', subtype=file_type, filename=file_name)
-
+            '''
             with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
                 smtp.login(sender, password)
                 smtp.send_message(msg)
