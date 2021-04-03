@@ -1,6 +1,6 @@
 import smtplib
 sender = "davis.waris@gmail.com"
-recipient = ["davis_waris@yahoo.com", "davis_waris@outlook.com", "warisdavis@gmail.com", "davewest06@outlook.com"]
+recipient = ["davis_waris@yahoo.com", "davis_waris@outlook.com", "warisdavis@gmail.com", "warrenwealth@yahoo.com"]
 password = "eebrvngzjydtyxpz"
 Subject = "Hello David"
 Text = "Please get back to me"
