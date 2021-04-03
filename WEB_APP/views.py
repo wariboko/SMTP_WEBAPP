@@ -52,7 +52,7 @@ def index(request):
         with smtplib.SMTP_SSL(f'{host}', port) as smtp:
             smtp.login(sender, password)
             smtp.sendmail(sender, lists, message)
-            #smtp.quit()
+            smtp.quit()
             return render(request, "WEB_APP/layout.html",{'message': "Mail Sent!"})
             
     # if a GET (or any other method) we'll create a blank form
