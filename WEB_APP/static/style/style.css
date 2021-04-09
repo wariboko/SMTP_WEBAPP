@@ -1,4 +1,6 @@
-
+a {
+    color:white;
+}
 .email-form input {
     background-color: #f4f4f4;
     padding: 12px 8px;
@@ -23,6 +25,7 @@
 .body {
     display: flex;
     flex-direction: column;
+    margin-bottom: 200px;
 }
 
 .email-form p {
@@ -63,28 +66,10 @@
     width: 38%;
 }
 
-.body{
-    margin-bottom: 200px;
-    background-color: darkslategrey;
-    /*background: url(../image2.jpg);
-    background-position: center;
-    Image doesn't repeat */
-    background-repeat: no-repeat;
-    background-size: inherit;
+.login-panel {
+    padding: 15% 30%;
+    position: relative;
 }
 
-
-/* For mobile devices */
-@media only screen and (max-width: 767px) {
-    body {
-        /* The file size of this background image is 93% smaller
-       * to improve page load speed on mobile internet connections */
-        background-image: url(../image2.jpg);
-        background: url(../image2.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: inherit;
-    }
-}
 
 

@@ -1,0 +1,70 @@
+
+{% extends "WEB_APP/layout.html" %}
+    {% block body %}
+    <div style="text-align: right;">
+        {{date}}
+    </div>
+     <h1 class="send_mail">Send Mail</h1>
+
+    <div class="container">
+        <section>
+            <div >
+                {% if message %}
+                    <div class="alert alert-success" role="alert">{{ message }}</div>
+                {% endif %}
+            </div>
+                
+            
+            <div>
+                <div class="form-group">
+                    <form action="{% url 'smtp' %}" method="POST"  enctype="multipart/form-data" class="email-form">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input class="form-control" autofocus type="text" name="sender" placeholder="Sender">
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="form-control" autofocus type="password" name="password" placeholder="Password">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input class="form-control" autofocus type="text" name="subject" placeholder="Subject">
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" autofocus type="text" name="host" placeholder="Host">
+                        </div>
+                        
+                        <div class="col-sm-2">
+                            <input class="form-control" autofocus type="text" name="port" placeholder="Port">
+                        </div>  
+                        
+                    </div>
+                    <br>
+                    <div class="row">
+            
+                        <div class="col-sm-12">
+                            <input class="form-control" autofocus type="text" id="recipient" name="recipient" placeholder="Recipient">
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <textarea class="form-control" aria-label="With textarea" name="message" placeholder="Send mail"></textarea>
+                        </div>
+                    </div>
+                        <br>
+                    <div class="form-group">
+                    <input class="form-control attachment" type="file" name="attachment">
+                </div>
+                    <br>
+                    <button type="submit" class="btn btn-outline-light">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+{% endblock %}

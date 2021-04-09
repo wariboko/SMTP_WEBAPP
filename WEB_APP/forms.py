@@ -15,5 +15,4 @@ class ContactForm(forms.Form):
     subject = forms.CharField()
     recipient = forms.CharField()
     message = forms.CharField()
-    cc = forms.CharField()
-    attachment =forms.FileInput()
+    attachment =forms.FileField(required=False)

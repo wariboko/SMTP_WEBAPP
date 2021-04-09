@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import files
+from .models import User
 
 # register your models here.
-admin.site.register(files)
+admin.site.register(User)
 
 
 
