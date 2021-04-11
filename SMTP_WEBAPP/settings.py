@@ -26,7 +26,7 @@ SECRET_KEY = '6@h+uc$e+cu&nb-t1b%77zn92=b=-b9d(lwx#g!6^_6_anrh%0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '3.64.241.243']
+ALLOWED_HOSTS = ['smtp-env.eba-qfexq5c2.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
